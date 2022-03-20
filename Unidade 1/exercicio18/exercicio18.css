@@ -1,0 +1,29 @@
+body {
+    background-image: url(images/fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1{
+    background-color: blue;
+}
+
+h2{
+    background-color: gray;
+}
+
+h3{
+    background-color: green;
+}
+
+h4{
+    background-color: purple;
+}
+
+h5{
+    background-color: yellow;
+}
+
+h6{
+    background-color: crimson;
+}

@@ -1,0 +1,19 @@
+*{
+    background-color: whitesmoke;
+    color: blue; 
+}
+
+p{
+    background-color: brown;
+    color: black;
+}
+
+#fundo-claro{
+    background-color: gray;
+    color: whitesmoke;
+}
+
+.fundo-escuro {
+    background-color:black;
+    color: green;
+}
