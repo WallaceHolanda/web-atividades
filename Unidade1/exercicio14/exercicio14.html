@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Escola Virtual</h1>
+    <h2 style="text-align: center;">Formulário de Pré-Matrícula</h2>
+
+
+    <div
+        style="border: 2px solid; width: 50%; position: relative; margin-left: auto; margin-right: auto; text-align: center;">
+        <form method="get">
+
+            <p style="font-weight: bold; text-align: left; padding-left: 2%;">Dados Pessoais:</p>
+
+            <label for="nome">Nome do Aluno</label>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="data">Nascimento (dd/mm/aaaa)</label>
+            <input type="date" id="data" name="data"> <br><br>
+
+            <label for="mae">Nome da Mãe</label>
+            <input type="text" id="mae" name="mae"><br><br>
+
+            <label for="pai">Nome do Pai</label>
+            <input type="text" id="pai" name="pai"><br><br>
+
+            <label for="ddd">Telefone DDD (</label>
+            <input type="text" id="ddd" name="ddd" size="3">
+
+            <label for="tel">) Tel: </label>
+            <input type="text" id="tell" name="tel" size="14">
+
+            <label for="ramal">Ramal: </label>
+            <input type="text" id="ramal" name="ramal" size="6"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+
+            <!-- <hr style="border: 2px solid;"> -->
+    </div>
+
+    <div style="border: 2px solid; width: 50%; height: 230px; position: relative; margin-left: auto; margin-right: auto;">
+        <p style="font-weight: bold; text-align: left; padding-left: 2%;">Informações da Pré-Matrícula</p>
+        <div style="float:left; width:20%; padding-left: 5%;">
+            <label for="assunto">Série:</label><br>
+            <select id="assunto" name="assunto"><br>
+                <option value="duvida">Pré-Escola</option>
+                <option value="atividade">Fundalmental</option>
+                <option value="prova">Médio</option>
+            </select>
+        </div>
+
+        <div style="float:left;width:20%; padding-left: 5%;">
+            <label for="assunto">Turno: </label><br>
+            <input type="radio" id="manha" name="turno" value="manha">
+            <label for="manha">Manhã </label><br>
+            <input type="radio" id="tarde" name="turno" value="tarde">
+            <label for="tarde">Tarde </label><br>
+        </div>
+
+        <div style="float:left; width:40%; padding-left: 5%; text-align: left;">
+            <label for="atividades">Atividades Extracurriculares: </label><br>
+            <input type="checkbox" id="op1" name="op1" value="Informatica">
+            <label for="op1">Informática</label><br>
+            <input type="checkbox" id="op2" name="op2" value="Musica">
+            <label for="op2">Música</label><br>
+            <input type="checkbox" id="op3" name="op3" value="Balet">
+            <label for="op3">Balet</label><br>
+            <input type="checkbox" id="op4" name="op4" value="Pintura">
+            <label for="op4"> Pintura</label><br>
+            <input type="checkbox" id="op5" name="op5" value="Judo">
+            <label for="op5">Informática</label><br>
+            <input type="checkbox" id="op6" name="op6" value="Futebol">
+            <label for="op6">Futebol</label><br>
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align: center;">
+        <button type="submit" onclick="">Enviar Formulário</button>
+        <button type="reset" onclick="">Limpar Campos</button>
+    </div>
+
+    </form>
+
+</body>
+
+</html>
