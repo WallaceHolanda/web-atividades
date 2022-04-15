@@ -1,0 +1,42 @@
+table{
+    /* padding: 2px; */
+    border: none;
+    width: 600px;
+    font-family: Arial;
+    font-size: 12px;
+    text-align: center;
+}
+
+caption{
+    color: white;
+    font-weight: bold;
+    background-color: #0D5188;
+}
+
+/* tr {
+    padding: 2px;
+} */
+
+#cidade-coluna{
+    text-align: left;
+}
+
+th{
+    font-weight: bold;
+    background-color: #66C5E3;
+}
+
+#indice{
+    background-color: #c0c0c0;
+    width: 10%;
+}
+
+#cidade {
+    text-align: left;
+    font-weight: bold;
+    color: #0D5188;
+}
+
+#populacao{
+    width: 15%;
+}
