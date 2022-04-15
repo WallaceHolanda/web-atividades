@@ -1,0 +1,14 @@
+a{
+    float: left;
+    background-color: rgb(49, 45, 45);
+    color: rgb(211, 204, 204);
+    padding: 14px 25px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    background-color: rgb(211, 204, 204);
+    color: rgb(49, 45, 45);
+}
