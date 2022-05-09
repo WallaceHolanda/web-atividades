@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Exercício 27</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <p>Configurações da Janela</p><br>
+    <form>
+        <label>X: </label>
+        <input id="x" name="x" type="text" size="8">
+
+        <label>Y: </label>
+        <input id="y" name="y" type="text" size="8">
+        <br><br>
+        
+        <label>Opção:</label><br>
+        <select id="opcao" name="opcao"><br>
+            <option value="novaposicao">Nova Posicão</option>
+            <option value="deslocamento">Deslocamento</option>
+        </select>
+
+        <br><br>
+        <a id="botao" onclick="moverJanela()">Movimentar</a>
+
+    </form>
+    
+    <script>
+        moverJanela();
+    </script>
+    
+</body>
+</html>
