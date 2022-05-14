@@ -1,3 +1,9 @@
+let janela;
+
+function criarJanelaPublica(){
+    janela = window.open("", "", "width=400, height=200");
+}
+
 function criarJanela() {
   return window.open("index.html", "", "width=400, height=200");
 }
@@ -19,15 +25,16 @@ function capturarOpcao(){
 }
 
 function moverJanela() {
-    const minhaJanela = criarJanela();
+    //const minhaJanela = criarJanela();
     const x = capturarValorX();
     const y = capturarValorY();
     const opcao = capturarOpcao();
 
     if(opcao == "novaposicao"){
-        minhaJanela.moveTo(x, y);
+        console.log("Entrei...");
+        janela.moveTo(x, y);
     } else if(opcao == "deslocamento"){
-        minhaJanela.moveBy(x, y);
+        janela.moveBy(x, y);
     } else {
         window.alert("Erro de opção!");
     }
