@@ -5,6 +5,10 @@ function executarScript(){
     const imageLink = "https://www.html.am/images/samples/remarkables_queenstown_new_zealand-300x225.jpg";
     var myDiv = document.getElementById("images");
 
+    if(quantidade <= 0){
+        window.alert("O valor digitado é inválido!");
+    }
+
     for(i = 0; i < quantidade; i++){
 
         var image = new Image();
