@@ -1,5 +1,6 @@
 table{
     /* padding: 2px; */
+    background-color: #C7E7F3;
     border: none;
     width: 600px;
     font-family: Arial;
@@ -13,15 +14,18 @@ caption{
     background-color: #0D5188;
 }
 
-/* tr {
+td {
+    margin: 2px;
     padding: 2px;
-} */
+}
 
 #cidade-coluna{
     text-align: left;
 }
 
 th{
+    margin: 2px;
+    padding: 2px;
     font-weight: bold;
     background-color: #66C5E3;
 }
