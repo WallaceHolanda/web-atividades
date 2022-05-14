@@ -13,6 +13,17 @@ function Livro(titulo, paginas, autor, genero) {
     this.paginas = paginas;
     this.autor = autor;
     this.genero = genero;
+    this.temMesmoAutor = function isMesmoAutor(livroAux){
+        livroAux = criarLivroExemplo();
+        return livroAux.autor.nome == this.autor.nome;
+    }
+}
+
+function criarLivroExemplo(){
+    const autorExemplo = new Autor("Antoine", "Francês");
+    const generoExemplo = new Genero("Literatura Infantil", "LIV#02");
+    const livroExemplo = new Livro("Pequeno Príncipe", "200", autorExemplo, generoExemplo);
+    return livroExemplo;
 }
 
 function existemCamposVazios(livro){
@@ -25,31 +36,17 @@ function existemCamposVazios(livro){
             livro.genero.codigo.length == 0); 
 }
 
-function temMesmoAutor(livro){
-    const autorExemplo = new Autor("Antoine", "Francês");
-    const generoExemplo = new Genero("Literatura Infantil", "LIV#02");
-    const livroExemplo = new Livro("Pequeno Príncipe", "200", autorExemplo, generoExemplo);
+function exibirCampo(mensagem){
+    let resposta;
 
-    return livroExemplo.autor.nome == livro.autor.nome;
+    do
+        resposta = prompt(mensagem);
+    while(resposta.length <= 0);
+
+    return resposta;
 }
 
-// Criar um livro e exibir as informações
-function criarLivro() {
-    const nomeAutor = prompt("Nome do Autor: ");
-    const nacionalidadeAutor = prompt("Nacionalidade do Autor: ");
-    const autor = new Autor(nomeAutor, nacionalidadeAutor);
-
-    const tipoGenero = prompt("Tipo do Gênero: ");
-    const codigoGenero = prompt("Código do Gênero");
-    const genero = new Genero(tipoGenero, codigoGenero);
-
-    const tituloLivro = prompt("Título do Livro: ");
-    const paginasLivro = prompt("Quantidade de páginas do Livro: ");
-    const livro = new Livro(tituloLivro, paginasLivro, autor, genero);
-
-    isAtributosVazios = existemCamposVazios(livro);
-    isMesmoAutor = temMesmoAutor(livro);
-
+function exibirDadosLivro(livro, isMesmoAutor){
     window.alert("== Informações sobre o Livro ==" + 
         "\n= Título do Livro: "  + livro.titulo +
         "\n= Páginas: " + livro.paginas + 
@@ -57,7 +54,24 @@ function criarLivro() {
         "\n= Nacionalidade: " + livro.autor.nacionalidade +
         "\n= Gênero: " + livro.genero.tipo +
         "\n= Código: " + livro.genero.codigo +
-        "\n= Há atributos vazios: " + isAtributosVazios +
         "\n= Mesmo Autor: " + isMesmoAutor
         );
+}
+
+// Criar um livro e exibir as informações
+function criarLivro() {
+    const nomeAutor = exibirCampo("Nome do Autor: ");
+    const nacionalidadeAutor = exibirCampo("Nacionalidade do Autor: ");
+    const autor = new Autor(nomeAutor, nacionalidadeAutor);
+
+    const tipoGenero = exibirCampo("Gênero do Livro: ");
+    const codigoGenero = exibirCampo("Código do Gênero");
+    const genero = new Genero(tipoGenero, codigoGenero);
+    
+    const tituloLivro = exibirCampo("Título do Livro: ");
+    const paginasLivro = exibirCampo("Quantidade de páginas do Livro: ");
+    const livro = new Livro(tituloLivro, paginasLivro, autor, genero);
+
+    mesmoAutor = livro.temMesmoAutor(criarLivroExemplo());
+    exibirDadosLivro(livro, mesmoAutor);
 }
